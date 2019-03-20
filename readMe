@@ -1,4 +1,4 @@
-该YTMultipleBrowser文件下为作者分享的多图浏览器简单封装 依赖第三库SDWebImage（pod 'SDWebImage', '~>3.7.6'）
+该YTMultipleBrowser文件下为作者分享的多图浏览器简单封装 依赖第三库SDWebImage
 
 YTPhotoBrowseView：
 1.对加载gif图片内纯消耗过大做了处理。（牺牲cpu，降低内存消耗，避免内存过高报警，导致程序异常运行）(网络gif图片会加载到硬盘里)
