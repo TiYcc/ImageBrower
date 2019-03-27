@@ -113,7 +113,7 @@
         info = [YTPhotoInfo photoInfoWithSourceType:YTPhotoSourceTypeLocal];
         UIImage *image = sm.image;
         if (image.images) image = image.images.firstObject;
-        info.image = sm.image;
+        info.image = image;
         info.imagePath = sm.imagePath;
     }
     
