@@ -1,4 +1,23 @@
 该YTMultipleBrowser文件下为作者分享的多图浏览器简单封装 依赖第三库SDWebImage
+YTPhotoBrowseView: 使用
+
+------------------ 开始 ------------------
+#import "YTPhotoBrowseView.h" //导入头文件
+
+// 创建YTPhotoBrowseView类对象
+YTPhotoBrowseView *photoBrowseView = [[YTPhotoBrowseView alloc]initWithFrame:frame andSetingModel:nil];
+photoBrowseView.delegate = self;
+photoBrowseView.dataSource = self;
+
+// 调用or刷新 photoBrowseView 界面
+[photoBrowseView reloadDataAtPage:page];
+
+// 实现代理
+// 多少张图片
+- (NSInteger)numberOfPhotosInPhotoBrowseView:(YTPhotoBrowseView *)photoBrowseView;
+// page对应图片信息
+- (YTPhotoInfo *)photoBrowseView:(YTPhotoBrowseView *)photoBrowseView photoInfoAtPage:(NSInteger)page;
+------------------ 完 -------------------
 
 YTPhotoBrowseView：
 1.对加载gif图片内纯消耗过大做了处理。（牺牲cpu，降低内存消耗，避免内存过高报警，导致程序异常运行）(网络gif图片会加载到硬盘里)
