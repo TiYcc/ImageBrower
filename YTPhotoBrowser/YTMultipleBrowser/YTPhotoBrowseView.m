@@ -175,7 +175,7 @@
         // 把view加到对应的容器中
         [self updataPhotoView:photoView atPage:page];
         if (page == _currentPage) {
-            _currentOffsetX = photoView.frame.origin.x;
+            _currentOffsetX = photoView.left;
             _currentPhotoView = photoView;
             [self.currentPhotoViews addObject:photoView];
         }else{
@@ -221,16 +221,16 @@
         CGFloat low_offset_x = _currentOffsetX - poorValue;
         
         // 滑动距离超过poorValue时进行更新
-        if (offset_x > big_offset_x) {
+        if (offset_x > big_offset_x) {// 取上整
             [self scrollViewWillPageToIndex:ceilf(pageFloat)];
-        } else if (offset_x < low_offset_x) {
+        } else if (offset_x < low_offset_x) {// 取下整
             [self scrollViewWillPageToIndex:floorf(pageFloat)];
         }
     }
 }
 
 - (void)scrollViewWillPageToIndex:(NSUInteger)pageIndex{
-    if ((_currentPage==pageIndex)||(pageIndex>=_imageCount)) return;
+    if ((_currentPage == pageIndex)||(pageIndex>=_imageCount)) return;
     _currentPhotoView = [self dequeueReusablePhotoViewAtPage:_currentPage = pageIndex];
     self.pageLabel.text = [NSString stringWithFormat:@"%ld/%ld",_currentPage+1,_imageCount];
 }
@@ -254,7 +254,7 @@
         [self.currentPhotoViews removeAllObjects];
         [self.currentPhotoViews addObject:current_pv];
         
-        _currentOffsetX = current_pv.x;
+        _currentOffsetX = current_pv.left;
     } else {
         // 容错处理 各种原因可能找不到当前cell
         [self didDismiss];

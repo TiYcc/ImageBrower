@@ -272,6 +272,7 @@
 				TargetAttributes = {
 					50F0B9E01C98EBE9005DF56C = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 64A545WW76;
 					};
 					50F0B9F91C98EBE9005DF56C = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -515,7 +516,7 @@
 			baseConfigurationReference = 46220E987770B3DB4F7BDBBE /* Pods.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 64A545WW76;
 				INFOPLIST_FILE = YTPhotoBrowser/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -530,7 +531,7 @@
 			baseConfigurationReference = 0D957B2266DADE13A66162DA /* Pods.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 64A545WW76;
 				INFOPLIST_FILE = YTPhotoBrowser/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
